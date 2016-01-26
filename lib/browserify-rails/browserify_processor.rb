@@ -43,7 +43,7 @@ module BrowserifyRails
         dependencies << "file-digest://#{URI.escape resolved}" if resolved
       end
 
-      new_data = run_browserify(input[:name])
+      new_data = run_browserify(input[:name]) + ";"
       { data: new_data, dependencies: dependencies }
     end
 
