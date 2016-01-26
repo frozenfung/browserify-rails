@@ -27,7 +27,7 @@ module BrowserifyRails
         context.depend_on(path)
       end
 
-      run_browserify(context.logical_path)
+      run_browserify(context.logical_path) + ";"
     end
 
   private
